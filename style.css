@@ -94,6 +94,8 @@ margin-left: 350px;
 .mySlides {
   display:none;
 }
+
+img {vertical-align:middle;}
 .active-slide {
   display:block;
 	margin-left:200px;

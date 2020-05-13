@@ -26,7 +26,12 @@ margin: 40px auto 60px;}
 #myname {font-size: 24px; color: #000099;
 margin-left: 350px;
 	}
-
+#mystory {font-size: 16px; color: #000099;
+margin-left: 330px;
+	}
+#myHeading {font-size: 24px; color: #000099;
+margin-left: 333px;
+}
 
 	#bulletpoints {
 	}

@@ -12,12 +12,16 @@
 
 
 				<div id="myname"> Polly Fisher</div>
+                <div id="mystory">Digital Production Artist</div>
             <hr>
-	    <div id="careeroutlook">
-		    <h3>Career Project Samples</h3>
+	   <div id="careeroutlook">
+       <br>
+        <div id="myHeading">Project Samples</div>
+		   
 		    </div>
 
 	    <div id="jobexp">
+        <a href="#Creative-text"><h4>Creative, Digital Production Examples</h4></a>
         <a href="#AEM-text"><h4>AEM</h4></a>
         <a href="#xmpie-text"><h4>XMPie</h4></a>
        <a href="#pageflex-text"><h4>Pageflex</h4></a>
@@ -25,6 +29,136 @@
         <a href="#seismic-text"><h4>Seismic Live Docs</h4></a>
         <!--<h4>Telescope</h4>-->
 
+
+
+		    <h3>Creative, Digital Production Examples</h3>
+		    <p id="Creative-text" class="intro-text">Shown here are projects I worked on including design, editing and programming to enable dynamic variability.
+</p> <br><br>
+
+
+
+
+		    <!-- Slideshow container -->
+
+ <div class="slideshow-container">
+  <div class="mySlides fade">
+   <!-- <div class="numbertext">1 / 4</div>-->
+    <img src="images/CustDocs.png" width="80%" margin-left= "75
+    px">
+    <div class="text">Customizable Documents</div>
+  </div>
+
+  <div class="mySlides fade">
+   <!-- <div class="numbertext">2 / 4</div>-->
+     <img src="images/CustDocs2.png" style="width:80%">
+    <div class="text">Digital Production Samples</div>
+  </div>
+
+  <div class="mySlides fade">
+   <!-- <div class="numbertext">2 / 4</div>-->
+     <img src="images/CustDocs3.png" style="width:80%">
+    <div class="text">Fine Art Examples</div>
+  </div>
+
+  <div class="mySlides fade">
+   <!-- <div class="numbertext">2 / 4</div>-->
+     <img src="images/CustDocs4.png" style="width:80%">
+    <div class="text">Additional Fine Art Examples</div>
+  </div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot" ></span>
+  <span class="dot" ></span>
+	<span class="dot" ></span>
+</div>
+</div>
+
+ <script>
+				(function() {
+
+  init(); //on page load - show first slide, hidethe rest
+
+  function init() {
+
+    parents = document.getElementsByClassName('slideshow-container');
+
+    for (j = 0; j < parents.length; j++) {
+      var slides = parents[j].getElementsByClassName("mySlides");
+      var dots = parents[j].getElementsByClassName("dot");
+      slides[0].classList.add('active-slide');
+      dots[0].classList.add('active');
+    }
+  }
+
+  dots = document.getElementsByClassName('dot'); //dots functionality
+
+  for (i = 0; i < dots.length; i++) {
+
+    dots[i].onclick = function() {
+
+      slides = this.parentNode.parentNode.getElementsByClassName("mySlides");
+
+      for (j = 0; j < this.parentNode.children.length; j++) {
+        this.parentNode.children[j].classList.remove('active');
+        slides[j].classList.remove('active-slide');
+        if (this.parentNode.children[j] == this) {
+          index = j;
+        }
+      }
+      this.classList.add('active');
+      slides[index].classList.add('active-slide');
+
+    }
+  }
+//prev/next functionality
+  links = document.querySelectorAll('.slideshow-container a');
+
+  for (i = 0; i < links.length; i++) {
+    links[i].onclick = function() {
+      current = this.parentNode;
+
+      var slides = current.getElementsByClassName("mySlides");
+      var dots = current.getElementsByClassName("dot");
+      curr_slide = current.getElementsByClassName('active-slide')[0];
+      curr_dot = current.getElementsByClassName('active')[0];
+      curr_slide.classList.remove('active-slide');
+      curr_dot.classList.remove('active');
+      if (this.className == 'next') {
+
+        if (curr_slide.nextElementSibling.classList.contains('mySlides')) {
+          curr_slide.nextElementSibling.classList.add('active-slide');
+          curr_dot.nextElementSibling.classList.add('active');
+        } else {
+          slides[0].classList.add('active-slide');
+          dots[0].classList.add('active');
+        }
+
+      }
+
+      if (this.className == 'prev') {
+
+        if (curr_slide.previousElementSibling) {
+          curr_slide.previousElementSibling.classList.add('active-slide');
+          curr_dot.previousElementSibling.classList.add('active');
+        } else {
+          slides[slides.length - 1].classList.add('active-slide');
+          dots[slides.length - 1].classList.add('active');
+        }
+
+      }
+
+    }
+
+  }
+})();
+
+</script>
+
+<br><br>
+<hr>
 		    <h3>AEM</h3>
 		    <p id="AEM-text" class="intro-text">Assisted in the publishing of the tax.thomsonreuters.com website as it re-launched on the Adobe Experience Manager (AEM) platform. Took on the entire publishing build effort for several pages within the site. Responsive to customer feedback and worked quickly and efficiently. Lead the effort on auditing and adding image thumbnails to the site properties and performing QA testing. Attention to detail, eagerness to learn, and helpfulness was appreciated and aided in the successful launch of the site in October 2018.</p> <p>Sample of Thomson Reuters Tax and Accounting Page I created: <a href="https://tax.thomsonreuters.com/en/fta">Free trade agreements</a></p><br><br>
 
@@ -148,7 +282,7 @@
 <br>
 <br><br><br>
 <p>Additional samples: TRTA <a href="https://tax.thomsonreuters.com/en/onesource/property-tax/personal-property-tax-software">Property tax</a>, <a href="https://tax.thomsonreuters.com/gl/en/onesource/tax-information-reporting/federal-state-tax">Fed/State Tax</a>, <a href="https://tax.thomsonreuters.com/en/aumentum/tax">Aumentum</a>
-
+<hr>
  <h3>XMPie</h3>
 		    <p id="xmpie-text" class="intro-text">Created and maintain ecommerce websites on XMPie CRM platform. Wireframe user interface. Day to day work includes
 creating new storefronts, maintained existing storefronts, and adding new or updated products (images and files).
@@ -279,6 +413,7 @@ Edited InDesign files for marketing campaign templates to add dynamic functional
 
 <br>
 <br><br><br>
+<hr>
 <h3>Pageflex</h3>
 		    <p id="pageflex-text" class="intro-text">Pageflex Storefront combines creative assets and business data via a programmable structure to create personalized print and email deliverables. I have experience building and configuring several different customizable templates.</p>
 
@@ -408,7 +543,7 @@ Edited InDesign files for marketing campaign templates to add dynamic functional
 <br>
 <br>
 
-
+<hr>
 
  <h3>Chili Publish</h3>
 		    <p id="chili-text" class="intro-text">Chili is a configurable UI for self-service branded document creation. I have experience using Chili Publish to create templates from input of the organization. Once created, users with a variety of skill sets – from beginners to seasoned graphics professionals – can edit these templates online. The edited templates are then delivered in the proper omnichannel format to the marketing automation program that served the organization. The advantage of Chili was that it allowed marketers with no graphic design skills to create complex, multi-page documents and it also allows for inline text editing.</p>
@@ -525,7 +660,7 @@ Edited InDesign files for marketing campaign templates to add dynamic functional
 <br>
 <br>
 
-
+<hr>
 
  <h3>Seismic Live Docs</h3>
 		    <p id="seismic-text" class="intro-text">Seismic allows markup on Microsoft word and Powerpoint documents in order to make them into editable documents in the Seismic Sales enablement platform. Seismic also has the ability to leverage data from Salesforce. With Seismic, sales and marketing are connected by an A.I.-powered platform. Sales reps are able to find and assemble the right, personalized content themselves without needing to pull in marketing to fulfill one-off requests. This means marketing stays in control of the messaging and sales can focus on selling, while every aspect of the content – from corporate branding to compliance.</p>
